@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token="")
 dp = Dispatcher()
 
-@dp.message(Command("start"))
+@dp.message_handler(commands=["start"])
 async def start(message: types.Message):
     print('Привет! Я бот помогающий твоему здоровью.')
     await message.answer("Привет! Я бот помогающий твоему здоровью.")
